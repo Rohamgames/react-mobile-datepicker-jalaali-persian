@@ -1,5 +1,6 @@
 # Persian jalalli mode added simply use the format below
 
+```javascript
 {
     'year': {
         format: 'jYYYY',
@@ -32,8 +33,10 @@
         step: 1,
     },
 }
+```
 
-it handles validations as well
+# it handles validations as well
+**a thanks to jalaali-js for their gr8 conversion package
 
 
 # react-mobile-datepicker
