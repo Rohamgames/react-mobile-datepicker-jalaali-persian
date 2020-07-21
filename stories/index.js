@@ -6,10 +6,10 @@ import { storiesOf } from '@storybook/react';
 
 import DatePicker from '../lib/index.js';
 import './index.css';
-
+const jalaali = require('jalaali-js');
 const props = {
-    value: new Date(),
-    isPopup: false,
+    value: jalaali.toJalaali(new Date()),
+    isPopup: true,
     theme: 'android'
 };
 
@@ -61,15 +61,16 @@ storiesOf('Theme', module)
     },
 };
 
-storiesOf('dateConfig', module)
-  .addWithInfo('YYYY,MM,DD', () => getComponent())
-  .addWithInfo('YYYY,MM,DD hh:mm', () => getComponent({dateConfig: dateConfigMap, showFormat: 'YYYY/MM/DD hh:mm'}))
-  .addWithInfo('hh:mm:ss', () => getComponent({dateConfig: ['hour', 'minute', 'second'], showFormat: 'hh:mm:ss'}))
-
-storiesOf('dateLimit', module)
-    .addWithInfo('min', () => getComponent({ min: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000) }))
-    .addWithInfo('max', () => getComponent({ max: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000) }))
-
-storiesOf('dateCaption', module)
-    .addWithInfo('default caption', () => getComponent({dateConfig: ['year', 'month', 'date', 'hour', 'minute', 'second'], showCaption: true}))
-    .addWithInfo('custom caption', () => getComponent({dateConfig: dateConfigMap, showCaption: true}))
+// storiesOf('dateConfig', module)
+//   .addWithInfo('YYYY,MM,DD', () => getComponent())
+//   .addWithInfo('YYYY,MM,DD hh:mm', () => getComponent({dateConfig: dateConfigMap, showFormat: 'YYYY/MM/DD hh:mm'}))
+//   .addWithInfo('hh:mm:ss', () => getComponent({dateConfig: ['hour', 'minute', 'second'], showFormat: 'hh:mm:ss'}))
+//
+// const jalaali = require('jalaali-js');
+// storiesOf('dateLimit', module)
+//     .addWithInfo('min', () => getComponent({ min: jalaali.toJalaali(new Date(1900,0,1)) }))
+//     .addWithInfo('max', () => getComponent({ max: jalaali.toJalaali(new Date()) }))
+//
+// storiesOf('dateCaption', module)
+//     .addWithInfo('default caption', () => getComponent({dateConfig: ['year', 'month', 'date', 'hour', 'minute', 'second'], showCaption: true}))
+//     .addWithInfo('custom caption', () => getComponent({dateConfig: dateConfigMap, showCaption: true}))

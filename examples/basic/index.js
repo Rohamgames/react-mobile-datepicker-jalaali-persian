@@ -3,11 +3,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { convertDate } from '../../lib/time.js';
 import DatePicker from '../../lib/index';
+const jalaali = require('jalaali-js');
 
 (function main() {
     class App extends React.Component {
         state = {
-            time: new Date(),
+            time: jalaali.toJalaali(new Date()),
             isOpen: false,
             theme: 'default',
         }
