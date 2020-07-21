@@ -1,3 +1,44 @@
+# Persian jalalli mode added simply use the format below
+
+```javascript
+{
+    'year': {
+        format: 'jYYYY',
+        caption: 'Year',
+        step: 1,
+    },
+    'month': {
+        format: 'jM',
+        caption: 'Mon',
+        step: 1,
+    },
+    'date': {
+        format: 'jD',
+        caption: 'Day',
+        step: 1,
+    },
+    'hour': {
+        format: 'hh',
+        caption: 'Hour',
+        step: 1,
+    },
+    'minute': {
+        format: 'mm',
+        caption: 'Min',
+        step: 1,
+    },
+    'second': {
+        format: 'hh',
+        caption: 'Sec',
+        step: 1,
+    },
+}
+```
+
+# it handles validations as well
+**thanks to jalaali-js for their gr8 conversion package**
+
+
 # react-mobile-datepicker
 [![Travis][build-badge]][build] [![npm package][npm-badge]][npm] [![Coveralls][coveralls-badge]][coveralls]
 
