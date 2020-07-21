@@ -36,7 +36,7 @@
 ```
 
 # it handles validations as well
-**a thanks to jalaali-js for their gr8 conversion package
+**thanks to jalaali-js for their gr8 conversion package**
 
 
 # react-mobile-datepicker
