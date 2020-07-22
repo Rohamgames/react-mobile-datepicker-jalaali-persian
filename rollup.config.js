@@ -3,17 +3,19 @@ import json from 'rollup-plugin-json';
 import memory from 'rollup-plugin-memory';
 import postcss from 'rollup-plugin-postcss';
 import fs from 'fs';
+import builtins from 'builtin-modules'
 
 var babelRc = JSON.parse(fs.readFileSync('.babelrc','utf8')); // eslint-disable-line
 
 export default {
     input: './lib/index.js',
     exports: 'default',
-    external: [ 'jalaali' ],
     globals: {
         'react': 'React',
-        'react-dom': 'ReactDOM'
+        'react-dom': 'ReactDOM',
+        'jalaali-js': 'JalaaliJs'
     },
+    external: builtins,
     plugins: [
         postcss({
             plugins: [

@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { convertDate } from '../../lib/time.js';
 import DatePicker from '../../lib/index';
-import jalaali from 'jalaali-js';
+import * as  jalaali from 'jalaali-js';
 (function main() {
     class App extends React.Component {
         state = {
