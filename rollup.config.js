@@ -9,12 +9,12 @@ var babelRc = JSON.parse(fs.readFileSync('.babelrc','utf8')); // eslint-disable-
 export default {
     input: './lib/index.js',
     exports: 'default',
+    external: [ 'jalaali' ],
     globals: {
         'react': 'React',
         'react-dom': 'ReactDOM'
     },
     plugins: [
-
         postcss({
             plugins: [
                 require('postcss-import')(),
@@ -34,7 +34,7 @@ export default {
             babelrc: false,
             presets: ['es2015-rollup'].concat(babelRc.presets.slice(1)),
             plugins: babelRc.plugins,
-            exclude: 'node_modules/**',
+            // exclude: 'node_modules/**',
             runtimeHelpers: true,
         }),
     ],

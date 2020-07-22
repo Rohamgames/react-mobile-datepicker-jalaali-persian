@@ -1,6 +1,6 @@
 {
   "name": "react-mobile-datepicker-jalaali-persian",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "一个移动端时间选择器react组件 IDK chinese but i needed something persian so here we are",
   "main": "./dist/react-mobile-datepicker-jallali-persian.js",
   "amdName": "reactMobileDatePicker",
@@ -90,12 +90,14 @@
     "webpack-dev-server": "^2.5.1"
   },
   "dependencies": {
-    "jalaali-js": "^1.1.0"
+    "jalaali-js": "^1.1.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
   },
   "peerDependencies": {
+    "jalaali-js": "^1.1.0",
     "react": ">=0.14",
-    "react-dom": ">=0.14",
-    "jalaali-js": "^1.1.0"
+    "react-dom": ">=0.14"
   },
   "license": "ISC",
   "bugs": {
