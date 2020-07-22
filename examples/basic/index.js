@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { convertDate } from '../../lib/time.js';
 import DatePicker from '../../lib/index';
-const jalaali = require('jalaali-js');
+const jalaali = ;
 
 (function main() {
     class App extends React.Component {

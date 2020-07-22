@@ -14,6 +14,7 @@ export default {
         'react-dom': 'ReactDOM'
     },
     plugins: [
+
         postcss({
             plugins: [
                 require('postcss-import')(),
@@ -24,7 +25,7 @@ export default {
             ],
             extensions: ['.css'],
         }),
-        json(),
+        json({ compact: true}),
         memory({
             path: 'lib/index',
             contents: "export { default } from './index'",
@@ -34,6 +35,7 @@ export default {
             presets: ['es2015-rollup'].concat(babelRc.presets.slice(1)),
             plugins: babelRc.plugins,
             exclude: 'node_modules/**',
+            runtimeHelpers: true,
         }),
     ],
 };
