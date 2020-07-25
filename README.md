@@ -4,10 +4,23 @@
 **thanks to jalaali-js for their gr8 conversion package**
 
 # Usage
+
+**install**
+
+```shell script
+npm install react-mobile-datepicker-jalaali-persian
+#or use yarn
+yarn react-mobile-datepicker-jalaali-persian
+```
+
+**sample**
 ```javascript
+
+
+
  const dateConfigMap = {
         'year': {
-            format: value => {//your custom function},
+            format: 'YYYY',
             caption: 'سال',
             step: 1,
         },
@@ -22,27 +35,38 @@
             step: 1,
         }
     };
+ const month = ['فروردین','اردیبهشت','خرداد','تیر','مرداد','شهریور','مهر','آبان','آذر','دی','بهمن','اسفند']
+ const dateConfigMap2 = {
+        'year': {
+            format: 'YYYY',
+            caption: 'سال',
+            step: 1,
+        },
+        'month': {
+            format: (value)=>(month[value.jm-1]),
+            caption: 'ماه',
+            step: 1,
+        },
+        'date': {
+            format: 'D',
+            caption: 'روز',
+            step: 1,
+        }
+    };
+
+
 
     <DatePicker
-          value={{
-            jy: 1399,
-            jm: 11,
-            jd: 11,
-          }}
-
+          value={{jy: 1399,jm: 11,jd: 11}}
           isOpen={true}
           theme="android-dark"
-          onSelect={(item) => {
-              //do something
-          }
-          }}
-          onCancel={(e) => {
-            // do something
-          }}
+          dateConfig={dateConfigMap2}
+          onSelect={(item) => {/* do something */}}
+          onCancel={(e) => {/* do something */}}
           confirmText="تایید"
           customHeader="تاریخ تولد"
           cancelText="بازگشت"
-        />
+    />  
 
 ```
 
