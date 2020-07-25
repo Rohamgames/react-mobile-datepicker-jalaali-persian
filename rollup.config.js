@@ -37,7 +37,7 @@ export default {
             presets: ['es2015-rollup'].concat(babelRc.presets.slice(1)),
             plugins: babelRc.plugins,
             // exclude: 'node_modules/**',
-            runtimeHelpers: true,
+            runtimeHelpers: false,
         }),
     ],
 };
