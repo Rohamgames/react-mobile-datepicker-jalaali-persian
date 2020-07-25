@@ -5,4 +5,4 @@ coverage/
 dist
 .idea
 .github
-
+/yarn.lock

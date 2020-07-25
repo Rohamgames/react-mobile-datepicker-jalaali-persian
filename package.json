@@ -1,6 +1,6 @@
 {
   "name": "react-mobile-datepicker-jalaali-persian",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "一个移动端时间选择器react组件 IDK chinese but i needed something persian so here we are",
   "main": "./dist/react-mobile-datepicker-jallali-persian.js",
   "amdName": "reactMobileDatePicker",
