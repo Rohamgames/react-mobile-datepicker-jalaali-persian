@@ -3,3 +3,6 @@ examples/__build__/
 .nyc_output/
 coverage/
 dist
+.idea
+.github
+
