@@ -1,47 +1,50 @@
 # Persian jalalli mode added simply use the format below
 
-```javascript
-{
-    'year': {
-        format: 'jYYYY',
-        caption: 'Year',
-        step: 1,
-    },
-    'month': {
-        format: 'jM',
-        caption: 'Mon',
-        step: 1,
-    },
-    'date': {
-        format: 'jD',
-        caption: 'Day',
-        step: 1,
-    },
-    'hour': {
-        format: 'hh',
-        caption: 'Hour',
-        step: 1,
-    },
-    'minute': {
-        format: 'mm',
-        caption: 'Min',
-        step: 1,
-    },
-    'second': {
-        format: 'hh',
-        caption: 'Sec',
-        step: 1,
-    },
-}
-```
-
 # it handles validations as well
 **thanks to jalaali-js for their gr8 conversion package**
 
+# Usage
+```javascript
+ const dateConfigMap = {
+        'year': {
+            format: value => {//your custom function},
+            caption: 'سال',
+            step: 1,
+        },
+        'month': {
+            format: 'M',
+            caption: 'ماه',
+            step: 1,
+        },
+        'date': {
+            format: 'D',
+            caption: 'روز',
+            step: 1,
+        }
+    };
 
-# react-mobile-datepicker
-[![Travis][build-badge]][build] [![npm package][npm-badge]][npm] [![Coveralls][coveralls-badge]][coveralls]
+    <DatePicker
+          value={{
+            jy: 1399,
+            jm: 11,
+            jd: 11,
+          }}
 
+          isOpen={true}
+          theme="android-dark"
+          onSelect={(item) => {
+              //do something
+          }
+          }}
+          onCancel={(e) => {
+            // do something
+          }}
+          confirmText="تایید"
+          customHeader="تاریخ تولد"
+          cancelText="بازگشت"
+        />
+
+```
 
 **a  lightweight react date picker for mobile, Not more than 4k**
 
